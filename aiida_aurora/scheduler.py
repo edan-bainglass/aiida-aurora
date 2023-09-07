@@ -147,7 +147,7 @@ class TomatoScheduler(Scheduler):
         # FIXME shell_type used to be job_tmpl.shell_type, which was added to
         # aiida-core's `JobTemplate` class by Loris. Awaiting resolution.
         shell_type = "powershell"
-        # shell_type = "bash"  # uncomment when debugging on Linux
+        shell_type = "bash"  # uncomment when debugging on Linux
         TomatoScheduler._shell_cmd = shell_type
         self._logger.debug(f"_get_submit_script_header: _shell_cmd: {self._shell_cmd}")
 
