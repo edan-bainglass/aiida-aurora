@@ -186,7 +186,7 @@ class TomatoScheduler(Scheduler):
         # Similarly to the 'direct' scheduler, we submit a bash script that actually executes
         # `ketchup submit {payload}`
         # the output of it is parsed *immediately* by _parse_submit_output
-        submit_command = f"{self._shell_cmd} {submit_script}"
+        submit_command = f"./{submit_script}"  # HACK see commit message
 
         self._logger.info(f"submitting with: {submit_command}")
 
